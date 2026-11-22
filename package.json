@@ -1,0 +1,26 @@
+{
+  "name": "domain-discovery-mcp",
+  "version": "0.1.1",
+  "description": "MCP connector for domain-discovery.remotify.run: check whether domain names are free to register, from any MCP client.",
+  "mcpName": "io.github.onlsol/domain-discovery-remotify-mcp",
+  "type": "module",
+  "bin": { "domain-discovery-mcp": "server.js" },
+  "main": "server.js",
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "node --test" },
+  "files": ["server.js", "README.md", "LICENSE", "NOTICE"],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.24.0"
+  },
+  "keywords": ["mcp", "remotify", "domain", "domain-availability", "rdap", "dns"],
+  "author": {
+    "name": "Online Solution",
+    "url": "https://www.online-solution.biz/"
+  },
+  "homepage": "https://domain-discovery.remotify.run",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onlsol/domain-discovery.remotify.run.git"
+  },
+  "license": "Apache-2.0"
+}

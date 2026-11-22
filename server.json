@@ -1,0 +1,50 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.onlsol/domain-discovery-remotify-mcp",
+  "description": "Domain search and lookup for any MCP client: availability, registrar, dates, NS, MX and SPF.",
+  "websiteUrl": "https://domain-discovery.remotify.run",
+  "repository": {
+    "url": "https://github.com/onlsol/domain-discovery.remotify.run",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "domain-discovery-mcp",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "DOMAIN_DISCOVERY_API_KEY",
+          "description": "Optional API key for higher limits.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://domain-discovery.remotify.run/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional: Bearer <key> for a paid plan",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "tools": [
+        "check_domains"
+      ]
+    }
+  }
+}
